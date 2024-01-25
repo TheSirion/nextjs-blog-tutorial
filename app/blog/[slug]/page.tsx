@@ -3,6 +3,8 @@ import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
 import { sanityClient, urlFor } from '../../lib/sanity';
 
+export const revalidate = 30; // Revalida a cada 30 segundos no máximo
+
 const getData = async (slug: string) => {
   try {
     const query = `
